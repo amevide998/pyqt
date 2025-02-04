@@ -7,7 +7,7 @@ class Window(QWidget):
         super().__init__()
 
         self.setGeometry(200, 200, 700, 400)
-        self.setWindowTitle('PyQt6 <Topic>')
+        self.setWindowTitle('PyQt6 <Topic Learning>')
         self.setWindowIcon(QIcon('../images/python.png'))
 
 
