@@ -18,6 +18,7 @@ class NotePadWindow(QMainWindow, Ui_MainWindow):
         self.actionPrint.triggered.connect(self.print_file)
         self.actionPrint_Preview.triggered.connect(self.preview_dialog)
         self.actionExport_PDF.triggered.connect(self.export_pdf)
+        self.actionQuit.triggered.connect(self.close)
 
 
     def maybe_save(self):
@@ -89,6 +90,9 @@ class NotePadWindow(QMainWindow, Ui_MainWindow):
             printer.setOutputFormat(QPrinter.OutputFormat.PdfFormat)
             printer.setOutputFileName(fn)
             self.textEdit.document().print(printer)
+
+    def exit(self):
+        self.close()
 
 
 app = QApplication(sys.argv)
